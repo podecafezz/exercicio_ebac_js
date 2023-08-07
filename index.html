@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Validador</title>
+  <script>
+    function validarFormulario() {
+      var campoA = parseFloat(document.getElementById('campoA').value);
+      var campoB = parseFloat(document.getElementById('campoB').value);
+
+      if (isNaN(campoA) || isNaN(campoB)) {
+        alert("Por favor, insira números válidos nos campos A e B.");
+        return false;
+      }
+
+      if (campoB > campoA) {
+        alert("Formulário válido! O número B é maior que o número A.");
+        return true;
+      } else {
+        alert("Formulário inválido! O número B deve ser maior que o número A.");
+        return false;
+      }
+    }
+  </script>
+      <link rel="stylesheet" href="./main.css"/>
+</head>
+
+<body>
+    <div>
+        <h1>Seja bem vindo ao meu validador! Insira os números logo abaixo:</h1>
+        <br>
+        <div class="form">
+        <form  onsubmit="return validarFormulario()">
+            <label for="campoA">Campo A:</label>
+            <input type="number" id="campoA" name="campoA" required><br><br>
+            <label for="campoB">Campo B:</label>
+            <input type="number" id="campoB" name="campoB" required><br><br>
+            <input type="submit" value="Enviar">
+        </form>
+      </div>
+    </div>
+</body>
+
+</html>

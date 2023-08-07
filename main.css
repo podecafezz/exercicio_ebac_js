@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #051923;
+    color: #00a6fb;
+  }
+
+.form{
+    padding-left: 50px;
+}
